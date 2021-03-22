@@ -240,27 +240,27 @@ const Exam_Hall = ({location}) => {
            }   
                   
        
-        //    document.addEventListener("visibilitychange",()=>{
+           document.addEventListener("visibilitychange",()=>{
                
-        //        if(document.hidden){
-        //            const count =tabChange+1
-        //            setTabChanges(count);
-        //            console.log(tabChange);
-        //            alert(`you have ${checkLimit} max tab change more then this and you are disqualified`)
-        //            checkLimit-=1;
-        //        }
-        //        if(checkLimit==0){
-        //         //    history.push("/login");
-        //            alert("max tab change limit reached")
-        //        }
-        //    })
+               if(document.hidden){
+                   const count =tabChange+1
+                   setTabChanges(count);
+                   console.log(tabChange);
+                   alert(`you have ${checkLimit} max tab change more then this and you are disqualified`)
+                   checkLimit-=1;
+               }
+               if(checkLimit==0){
+                //    history.push("/login");
+                   alert("max tab change limit reached")
+               }
+           })
 
-        //    if(!check_web_cam){
-        //        document.querySelector(".popup_setup").style.display="block";
-        //    }
-        //    if(check_web_cam){
-        //        document.querySelector(".popup_setup").style.display="none";
-        //    }
+           if(!check_web_cam){
+               document.querySelector(".popup_setup").style.display="block";
+           }
+           if(check_web_cam){
+               document.querySelector(".popup_setup").style.display="none";
+           }
            
        
    },[tabChange,check_web_cam])
@@ -349,9 +349,9 @@ const Exam_Hall = ({location}) => {
                        
                         :
                         <>
-                                {/* <div>
+                                <div>
                                     <Face />
-                                </div>     */}
+                                </div>    
                             <div className="submit_your_ans" >
                                 <form style={formContainer} onSubmit={onSubmitAnswer}>
                                 
