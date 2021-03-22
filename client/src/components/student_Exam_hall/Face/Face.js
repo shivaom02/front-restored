@@ -79,7 +79,7 @@ const runFacemesh = async()=>{
 
     
     
-  },10000)
+  },1000)
 
 };
 
