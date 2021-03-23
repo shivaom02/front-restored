@@ -2,14 +2,20 @@ import React,{useState} from 'react'
 import {Link} from 'react-router-dom';
 import Navbar from '../navbar/Navbar';
 import '../../css/student_entry.css';
+import queryString from 'query-string';
+
 import axios from 'axios';
 
 const Student_Entry = () => {
 
+    
+    const { name , email } = queryString.parse(location.search);
+
+    console.log(name,email);
+
     const [student,setStudent] = useState({
-        name:'',
         room:'',
-        scholarId:0
+        scholarId:0,
     })
 
     const [registered , setRegistered ] = useState(false);
@@ -18,7 +24,7 @@ const Student_Entry = () => {
 
     const [_id , setId ] = useState(null);
 
-    const { name , room , scholarId } = student;
+    const { room , scholarId } = student;
 
     const handleChange = (e)=>{
 
@@ -61,12 +67,16 @@ const Student_Entry = () => {
             <h2  className="SEhead">Student registration Portal</h2>
             <form onSubmit={onSubmit} style={container}>
                  <span className="SEtop"></span>
-                <input type='text' name='name' onChange={handleChange} value={name} placeholder='Enter your name' className="SEinput"/>
+                 <input type='text' name='name' value={name} placeholder='your name' className="SEinput"/>
                 <span className="SEtop"></span>
                 <input type='Number' name='scholarId' onChange={handleChange}  placeholder='Enter your scholarId' className="SEinput"/>
                 <span className="SEtop"></span>
                 <input type='text' name='room' onChange={handleChange} value={room} placeholder='Enter your room name' className="SEinput"/>
                 <br />
+                <span className="SEtop">Your Email</span>
+           
+                <input type='email' name='email' value={email} placeholder='your email' className="SEinput"/>
+               
                 <button type='submit' className="SEbutton">Check if exam is still going on</button>
             </form>
             

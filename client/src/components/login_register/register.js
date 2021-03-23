@@ -79,7 +79,7 @@ const Register = (props) => {
         <button className="join noHover" type="submit">
            <Link to="/login" style={{color:"white",textDecoration:'none'}}>Sign Up</Link>
         </button>
-        <p className="" style={{marginTop:'50px'}}><Link to="/student" style={{color:"white",textDecoration:'none',fontSize:'150%',fontWeight:'bold'}}>Are you as student ?</Link>.</p>
+        <p className="" style={{marginTop:'50px'}}><Link to="/studentLogin" style={{color:"white",textDecoration:'none',fontSize:'150%',fontWeight:'bold'}}>Are you as student ?</Link>.</p>
       </div>
     </section>
     <section className="right">

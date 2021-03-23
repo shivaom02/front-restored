@@ -154,7 +154,7 @@ const Create_Exam = ()=> {
               </div>
               <div className="Enter_class">
               { examCreated===true && teacherState!==null ? 
-                  <Link to={`/exam_hall?name=${teacherState.name}&room=${name}&_id=${examId}&st=1`}><button>Click to Enter Classroom</button></Link> 
+                  <Link to={`/exam_hall?name=${teacherState.name}(teacher)&room=${name}&_id=${examId}&st=1`}><button>Click to Enter Classroom</button></Link> 
               : null }
              </div>
          </>

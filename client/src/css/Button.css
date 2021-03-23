@@ -1,7 +1,19 @@
 :root {
     --primary: #3acbf7;
 }
+.buttonStyle{
+  padding:10px;
+  border:2px solid white;
+  cursor:pointer;
+}
+.buttonStyle:hover{
 
+    transition: all 0.3s ease-out;
+
+    transform: scale(1.05);
+
+    background-color:aqua;
+}
 .btn {
     padding: 8px 20px;
     border-radius: 4px;
