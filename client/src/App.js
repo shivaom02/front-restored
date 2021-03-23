@@ -20,6 +20,8 @@ import ExamDetails from './components/particularExamDetails/exam';
 import Editor from "./components/Editor/Editor";
 import EhStudent from "./components/student_Exam_hall/EHStudent/EHStudent";
 
+import StudentAuth from './components/studentAuth/auth';
+
 import StudentAnswerScript from './components/studentAnswerScript.js/studentAnswer';
 import WebState from "./context/webcamContext/webCamState"
 
@@ -44,6 +46,7 @@ function App() {
              <Route path="/register" component={Register} />
              <Route path="/login" component={Login} />
              <PrivateRoute path="/exam/create/:_id" component={Create_Exam} />
+             <Route path="/studentLogin" component={StudentAuth} />
              <Route path='/exam_hall' component={Exam_Hall} />
              <Route exact path='/student' component={Student_Entry}/>
              <PrivateRoute path='/exam/details/:_id' component={ExamDetails} />
